@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Próximas Clases</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let clase of clases">
+      <ion-item>
+        <ion-label>
+          <h2>{{ clase.tema }}</h2>
+          <p>{{ clase.fecha | date:'fullDate' }} a las {{ clase.fecha | date:'shortTime' }}</p>
+        </ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option (click)="confirmCancellation(clase.id)" color="danger">
+          Cancelar
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,31 @@
+ion-header {
+    background-color: #4a90e2; /* Color del encabezado */
+    color: white; /* Color del texto del encabezado */
+  }
+  
+  ion-item {
+    --background: #f8f8f8; /* Color de fondo más claro */
+    --border-color: #d1d1d1; /* Color de borde */
+    --border-width: 1px;
+    margin-bottom: 10px;
+  }
+  
+  ion-label h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333; /* Color del texto del título */
+  }
+  
+  ion-label p {
+    margin: 0;
+    color: #666; /* Color del texto del comentario */
+  }
+  
+  ion-item-divider {
+    background-color: #4a90e2; /* Color del divisor */
+    color: white; /* Color del texto del divisor */
+  }
+  
+  ion-list {
+    margin: 10px;
+  }

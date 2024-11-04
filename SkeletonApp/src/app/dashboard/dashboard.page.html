@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Resumen de Habilidades y Progreso</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content scroll-y="true" force-overscroll="true" fullscreen="true" style="height: 100vh;">
+  <ion-card class="animate_animated animate__fadeinDown">
+    <ion-card-header>
+      <ion-card-title>Juanito  Pérez</ion-card-title>
+      <ion-card-subtitle>Última actualización: 25 de Octubre de 2024</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-img src="assets/default-profile.jpg" alt="Perfil"></ion-img>
+      <ion-label>Nivel de progreso general: 75%</ion-label>
+      <ion-progress-bar value="0.75"></ion-progress-bar>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+    <ion-item-divider color="light">
+      <ion-label>Progresos Recientes</ion-label>
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>
+        <h2>Operaciones con Números Enteros</h2>
+        <p>Nivel de Dominio: Intermedio</p>
+        <p>Fecha: 10 de Octubre de 2024</p>
+      </ion-label>
+      <ion-progress-bar color="secondary" value="0.60"></ion-progress-bar>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h2>Resolución de Problemas</h2>
+        <p>Nivel de Dominio: Básico</p>
+        <p>Última Evaluación: 5 de Octubre de 2023</p>
+      </ion-label>
+      <ion-progress-bar color="secondary" value="0.40"></ion-progress-bar>
+    </ion-item>
+  </ion-list>
+
+  <ion-card (click)="toggleFeedback()">
+    <ion-card-header>
+      <ion-card-title>Última Retroalimentación y Sugerencia</ion-card-title>
+    </ion-card-header>
+    <ion-card-content *ngIf="isFeedbackExpanded">
+      <p>Buen desempeño en operaciones básicas. Debe mejorar en resolución de problemas complejos.</p>
+      <ul>
+        <li>Practicar problemas de suma y resta compleja.</li>
+        <li>Revisar conceptos de multiplicación y división.</li>
+        <li>Revisar tiempo de resolución</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="full" color="tertiary">
+    Descargar Reporte en PDF
+  </ion-button>
+
+</ion-content>
